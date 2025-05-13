@@ -205,7 +205,7 @@
             Name = "MainForm";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "MainForm";
-            FormClosing += MainForm_FormClosing_1;
+            FormClosing += MainForm_FormClosing;
             Load += MainForm_Load;
             ((System.ComponentModel.ISupportInitialize)dataGridView_orders).EndInit();
             ResumeLayout(false);
