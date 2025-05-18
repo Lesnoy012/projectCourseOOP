@@ -41,6 +41,8 @@
             button_searchDetail = new Button();
             button_exportPDF = new Button();
             button1 = new Button();
+            label1 = new Label();
+            labelCountOfElements = new Label();
             ((System.ComponentModel.ISupportInitialize)dataGridView_orders).BeginInit();
             SuspendLayout();
             // 
@@ -50,6 +52,7 @@
             dataGridView_orders.AllowUserToDeleteRows = false;
             dataGridView_orders.AllowUserToResizeColumns = false;
             dataGridView_orders.AllowUserToResizeRows = false;
+            dataGridView_orders.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             dataGridView_orders.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dataGridView_orders.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView_orders.Location = new Point(12, 32);
@@ -61,6 +64,7 @@
             // 
             // button_addOrder
             // 
+            button_addOrder.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             button_addOrder.Cursor = Cursors.Hand;
             button_addOrder.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 204);
             button_addOrder.Location = new Point(260, 353);
@@ -73,6 +77,7 @@
             // 
             // button_openDB
             // 
+            button_openDB.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             button_openDB.Cursor = Cursors.Hand;
             button_openDB.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 204);
             button_openDB.Location = new Point(136, 353);
@@ -85,6 +90,7 @@
             // 
             // button_createDB
             // 
+            button_createDB.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             button_createDB.Cursor = Cursors.Hand;
             button_createDB.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 204);
             button_createDB.Location = new Point(12, 353);
@@ -97,6 +103,7 @@
             // 
             // button_changeOrder
             // 
+            button_changeOrder.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             button_changeOrder.Cursor = Cursors.Hand;
             button_changeOrder.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 204);
             button_changeOrder.Location = new Point(508, 353);
@@ -109,6 +116,7 @@
             // 
             // button_deleteOrder
             // 
+            button_deleteOrder.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             button_deleteOrder.Cursor = Cursors.Hand;
             button_deleteOrder.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 204);
             button_deleteOrder.Location = new Point(384, 353);
@@ -132,6 +140,7 @@
             // 
             // button_reset
             // 
+            button_reset.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             button_reset.BackColor = SystemColors.Control;
             button_reset.BackgroundImageLayout = ImageLayout.Center;
             button_reset.Cursor = Cursors.Hand;
@@ -164,6 +173,7 @@
             // 
             // button_exportPDF
             // 
+            button_exportPDF.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             button_exportPDF.Cursor = Cursors.Hand;
             button_exportPDF.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 204);
             button_exportPDF.Location = new Point(632, 353);
@@ -176,6 +186,7 @@
             // 
             // button1
             // 
+            button1.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             button1.Cursor = Cursors.Hand;
             button1.Image = (Image)resources.GetObject("button1.Image");
             button1.Location = new Point(762, 353);
@@ -185,11 +196,31 @@
             button1.UseVisualStyleBackColor = true;
             button1.Click += button_close_Click;
             // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Location = new Point(364, 8);
+            label1.Name = "label1";
+            label1.Size = new Size(145, 15);
+            label1.TabIndex = 12;
+            label1.Text = "Отображено элементов: ";
+            // 
+            // labelCountOfElements
+            // 
+            labelCountOfElements.AutoSize = true;
+            labelCountOfElements.Location = new Point(508, 8);
+            labelCountOfElements.Name = "labelCountOfElements";
+            labelCountOfElements.Size = new Size(37, 15);
+            labelCountOfElements.TabIndex = 13;
+            labelCountOfElements.Text = "0 из 0";
+            // 
             // MainForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(892, 419);
+            Controls.Add(labelCountOfElements);
+            Controls.Add(label1);
             Controls.Add(button1);
             Controls.Add(button_exportPDF);
             Controls.Add(button_searchDetail);
@@ -202,6 +233,7 @@
             Controls.Add(button_openDB);
             Controls.Add(button_addOrder);
             Controls.Add(dataGridView_orders);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "MainForm";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "MainForm";
@@ -226,5 +258,7 @@
         private Button button_searchDetail;
         private Button button_exportPDF;
         private Button button1;
+        private Label label1;
+        private Label labelCountOfElements;
     }
 }

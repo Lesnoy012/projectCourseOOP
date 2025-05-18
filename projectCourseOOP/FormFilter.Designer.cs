@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormFilter));
             label1 = new Label();
             dateTimePickerFrom = new DateTimePicker();
             dateTimePickerTo = new DateTimePicker();
@@ -113,6 +114,7 @@
             Controls.Add(dateTimePickerTo);
             Controls.Add(dateTimePickerFrom);
             Controls.Add(label1);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "FormFilter";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Фильтр";
